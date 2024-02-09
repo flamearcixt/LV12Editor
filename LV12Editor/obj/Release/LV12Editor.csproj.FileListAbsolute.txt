@@ -9,3 +9,15 @@ C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.csproj.
 C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.csproj.CoreCompileInputs.cache
 C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.exe
 C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.pdb
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\bin\Release\LV12Editor.exe.config
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\bin\Release\LV12Editor.exe
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\bin\Release\LV12Editor.pdb
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.csproj.AssemblyReference.cache
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.Properties.Resources.resources
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.csproj.GenerateResource.cache
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.csproj.CoreCompileInputs.cache
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.exe
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.pdb
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.Formulario.resources
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.Resources.eng.resources
+C:\Users\elian\source\repos\LV12Editor\LV12Editor\obj\Release\LV12Editor.Resources.PTBR.resources

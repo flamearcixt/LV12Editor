@@ -8,6 +8,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 using System.Xml;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LV12Editor
 {
@@ -15,27 +19,20 @@ namespace LV12Editor
 
     public partial class Formulario : Form
     {
+        // No início da sua classe de formulário
+        ResourceManager rmPTBR = new ResourceManager("LV12Editor.Resources.PTBR", Assembly.GetExecutingAssembly());
+        ResourceManager rmENG = new ResourceManager("LV12Editor.Resources.ENG", Assembly.GetExecutingAssembly());
         public Formulario()
         {
             InitializeComponent();
             string[] ports = SerialPort.GetPortNames();
 
             comboBoxPort.Items.AddRange(ports);
-
-            // Carrega o valor inteiro salvo nas configurações locais
-            int indexSalvo = Properties.Settings.Default.Linguagem;
-
-            // Verifica se o índice é válido para os itens no ComboBox
-            if (indexSalvo >= 0 && indexSalvo < Linguage_Box.Items.Count)
-            {
-                // Se o índice é válido, define o SelectedIndex do ComboBox
-                Linguage_Box.SelectedIndex = indexSalvo;
-            }
             CarregarComandos();
         }
 
-
         #region functions avulsas
+        
         private void AdicionarItemAoListView(string comando)
         {
             var item = new ListViewItem(comando);
@@ -157,13 +154,6 @@ namespace LV12Editor
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         #endregion
 
         private void comboBoxPort_SelectedIndexChanged(object sender, EventArgs e)
@@ -211,15 +201,8 @@ namespace LV12Editor
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void SaveConfig_Button_Click(object sender, EventArgs e)
         {
@@ -301,10 +284,6 @@ namespace LV12Editor
 
         }
 
-        private void Formulario_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
 
         private void listViewComandos_KeyDown(object sender, KeyEventArgs e)
         {
@@ -328,5 +307,55 @@ namespace LV12Editor
                 SalvarComandos();
             }
         }
+
+        private void PTBRButton_Click(object sender, EventArgs e)
+        {
+            // Carrega o texto do recurso em português
+            PORTUSBText.Text = rmPTBR.GetString("PORTUSBText");
+            buttonReadPort.Text = rmPTBR.GetString("buttonReadPort");
+            buttonClosePort.Text = rmPTBR.GetString("buttonClosePort");
+            PROFILEText.Text = rmPTBR.GetString("PROFILEText");
+            LoadProfileButton.Text = rmPTBR.GetString("LoadProfileButton");
+            SaveProfileButton.Text = rmPTBR.GetString("SaveProfileButton");
+            CONNECTIONText.Text = rmPTBR.GetString("PROFILEText");
+            ServidorText.Text = rmPTBR.GetString("ServidorText");
+            PORTText.Text = rmPTBR.GetString("PORTText");
+            USERText.Text = rmPTBR.GetString("USERText");
+            PASSText.Text = rmPTBR.GetString("PASSText");
+            STREAMINGText.Text = rmPTBR.GetString("STREAMINGText");
+            STOPText.Text = rmPTBR.GetString("STOPText");
+            MOVINGText.Text = rmPTBR.GetString("MOVINGText");
+            ANGLEText.Text = rmPTBR.GetString("ANGLEText");
+            SaveDevice.Text = rmPTBR.GetString("SaveDevice");
+            COMMANDSText.Text = rmPTBR.GetString("COMMANDSText");
+            OutPutText.Text = rmPTBR.GetString("OutPutText");
+
+        }
+
+        private void ENGButton_Click(object sender, EventArgs e)
+        {
+            // Carrega o texto do recurso em inglês
+            PORTUSBText.Text = rmENG.GetString("PORTUSBText");
+            buttonReadPort.Text = rmENG.GetString("buttonReadPort");
+            buttonClosePort.Text = rmENG.GetString("buttonClosePort");
+            PROFILEText.Text = rmENG.GetString("PROFILEText");
+            LoadProfileButton.Text = rmENG.GetString("LoadProfileButton");
+            SaveProfileButton.Text = rmENG.GetString("SaveProfileButton");
+            CONNECTIONText.Text = rmENG.GetString("PROFILEText");
+            ServidorText.Text = rmENG.GetString("ServidorText");
+            PORTText.Text = rmENG.GetString("PORTText");
+            USERText.Text = rmENG.GetString("USERText");
+            PASSText.Text = rmENG.GetString("PASSText");
+            STREAMINGText.Text = rmENG.GetString("STREAMINGText");
+            STOPText.Text = rmENG.GetString("STOPText");
+            MOVINGText.Text = rmENG.GetString("MOVINGText");
+            ANGLEText.Text = rmENG.GetString("ANGLEText");
+            SaveDevice.Text = rmENG.GetString("SaveDevice");
+            COMMANDSText.Text = rmENG.GetString("COMMANDSText");
+            OutPutText.Text = rmENG.GetString("OutPutText");
+
+        }
+
+
     }
 }

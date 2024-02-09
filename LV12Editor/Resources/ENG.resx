@@ -117,26 +117,58 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="5800470" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5800470.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ANGLEText" xml:space="preserve">
+    <value>Angle</value>
   </data>
-  <data name="ENG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ENG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonClosePort" xml:space="preserve">
+    <value>Close</value>
   </data>
-  <data name="PTBR" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PTBR.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buttonReadPort" xml:space="preserve">
+    <value>Open</value>
   </data>
-  <data name="5093064" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5093064.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="COMMANDSText" xml:space="preserve">
+    <value>Commands</value>
   </data>
-  <data name="ENGEUA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ENGEUA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CONNECTIONText" xml:space="preserve">
+    <value>Connection</value>
   </data>
-  <data name="cropped-logo-imperio-32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cropped-logo-imperio-32x32.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LoadProfileButton" xml:space="preserve">
+    <value>Load</value>
   </data>
-  <data name="LOGO-IMPERIO-DOS-RASTREADORES" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LOGO-IMPERIO-DOS-RASTREADORES1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MOVINGText" xml:space="preserve">
+    <value>Moving</value>
+  </data>
+  <data name="OutPutText" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="PASSText" xml:space="preserve">
+    <value>Pass</value>
+  </data>
+  <data name="PORTText" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="PORTUSBText" xml:space="preserve">
+    <value>Port USB</value>
+  </data>
+  <data name="PROFILEText" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="SaveDevice" xml:space="preserve">
+    <value>Save Device</value>
+  </data>
+  <data name="SaveProfileButton" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ServidorText" xml:space="preserve">
+    <value>Server</value>
+  </data>
+  <data name="STOPText" xml:space="preserve">
+    <value>Stopped</value>
+  </data>
+  <data name="STREAMINGText" xml:space="preserve">
+    <value>Streaming</value>
+  </data>
+  <data name="USERText" xml:space="preserve">
+    <value>User</value>
   </data>
 </root>
