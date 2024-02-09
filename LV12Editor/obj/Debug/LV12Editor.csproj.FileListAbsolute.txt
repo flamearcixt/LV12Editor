@@ -1,0 +1,11 @@
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\bin\Debug\LV12Editor.exe.config
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\bin\Debug\LV12Editor.exe
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\bin\Debug\LV12Editor.pdb
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Debug\LV12Editor.csproj.AssemblyReference.cache
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Debug\LV12Editor.csproj.SuggestedBindingRedirects.cache
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Debug\LV12Editor.Formulario.resources
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Debug\LV12Editor.Properties.Resources.resources
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Debug\LV12Editor.csproj.GenerateResource.cache
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Debug\LV12Editor.csproj.CoreCompileInputs.cache
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Debug\LV12Editor.exe
+C:\Users\petru\Source\Repos\LV12Editor\LV12Editor\obj\Debug\LV12Editor.pdb

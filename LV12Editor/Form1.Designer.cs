@@ -48,8 +48,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.User_Input = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ProgressBar = new System.Windows.Forms.ProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.ProgressBar = new System.Windows.Forms.ProgressBar();
+            this.Linguage_Box = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -62,12 +64,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.Expandir = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Linguage_Box = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.listViewComandos = new System.Windows.Forms.ListView();
+            this.comandos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.AddCommando_Button = new System.Windows.Forms.Button();
+            this.textBoxComando = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Port_Input)).BeginInit();
             this.panel2.SuspendLayout();
@@ -87,7 +92,7 @@
             this.buttonReadAPN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonReadAPN.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonReadAPN.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.buttonReadAPN.Location = new System.Drawing.Point(15, 75);
+            this.buttonReadAPN.Location = new System.Drawing.Point(12, 75);
             this.buttonReadAPN.Name = "buttonReadAPN";
             this.buttonReadAPN.Size = new System.Drawing.Size(75, 33);
             this.buttonReadAPN.TabIndex = 4;
@@ -99,8 +104,9 @@
             // 
             this.comboBoxPort.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.comboBoxPort.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxPort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPort.FormattingEnabled = true;
-            this.comboBoxPort.Location = new System.Drawing.Point(12, 48);
+            this.comboBoxPort.Location = new System.Drawing.Point(9, 48);
             this.comboBoxPort.Name = "comboBoxPort";
             this.comboBoxPort.Size = new System.Drawing.Size(156, 21);
             this.comboBoxPort.TabIndex = 5;
@@ -111,7 +117,7 @@
             this.SelectComText.AutoSize = true;
             this.SelectComText.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectComText.ForeColor = System.Drawing.Color.White;
-            this.SelectComText.Location = new System.Drawing.Point(12, 27);
+            this.SelectComText.Location = new System.Drawing.Point(9, 27);
             this.SelectComText.Name = "SelectComText";
             this.SelectComText.Size = new System.Drawing.Size(94, 18);
             this.SelectComText.TabIndex = 7;
@@ -279,26 +285,29 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(24)))));
-            this.panel3.Controls.Add(this.ProgressBar);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.ProgressBar);
+            this.panel3.Controls.Add(this.Linguage_Box);
             this.panel3.Controls.Add(this.SelectComText);
             this.panel3.Controls.Add(this.buttonReadAPN);
             this.panel3.Controls.Add(this.comboBoxPort);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(760, 133);
+            this.panel3.Size = new System.Drawing.Size(954, 133);
             this.panel3.TabIndex = 36;
             // 
-            // ProgressBar
+            // label3
             // 
-            this.ProgressBar.BackColor = System.Drawing.Color.Green;
-            this.ProgressBar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.ProgressBar.Location = new System.Drawing.Point(0, 110);
-            this.ProgressBar.Name = "ProgressBar";
-            this.ProgressBar.Size = new System.Drawing.Size(760, 23);
-            this.ProgressBar.TabIndex = 11;
-            this.ProgressBar.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(177, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 18);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Porta COM";
             // 
             // button1
             // 
@@ -307,12 +316,38 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button1.Location = new System.Drawing.Point(93, 75);
+            this.button1.Location = new System.Drawing.Point(90, 75);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 33);
             this.button1.TabIndex = 10;
             this.button1.Text = "Fechar";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // ProgressBar
+            // 
+            this.ProgressBar.BackColor = System.Drawing.Color.Green;
+            this.ProgressBar.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.ProgressBar.Location = new System.Drawing.Point(0, 110);
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.Size = new System.Drawing.Size(954, 23);
+            this.ProgressBar.TabIndex = 11;
+            this.ProgressBar.Visible = false;
+            // 
+            // Linguage_Box
+            // 
+            this.Linguage_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Linguage_Box.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Linguage_Box.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Linguage_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Linguage_Box.FormattingEnabled = true;
+            this.Linguage_Box.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Linguage_Box.Items.AddRange(new object[] {
+            "Português",
+            "Inglês"});
+            this.Linguage_Box.Location = new System.Drawing.Point(180, 48);
+            this.Linguage_Box.Name = "Linguage_Box";
+            this.Linguage_Box.Size = new System.Drawing.Size(156, 21);
+            this.Linguage_Box.TabIndex = 11;
             // 
             // pictureBox1
             // 
@@ -321,7 +356,7 @@
             this.pictureBox1.BackgroundImage = global::LV12Editor.Properties.Resources.LOGO_IMPERIO_DOS_RASTREADORES;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(544, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(738, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(203, 96);
             this.pictureBox1.TabIndex = 9;
@@ -419,13 +454,13 @@
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button3.Location = new System.Drawing.Point(595, 371);
+            this.button3.Location = new System.Drawing.Point(595, 408);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(156, 33);
             this.button3.TabIndex = 39;
@@ -434,7 +469,7 @@
             // 
             // Expandir
             // 
-            this.Expandir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Expandir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Expandir.BackColor = System.Drawing.Color.Transparent;
             this.Expandir.BackgroundImage = global::LV12Editor.Properties.Resources._5093064;
             this.Expandir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -445,7 +480,7 @@
             this.Expandir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Expandir.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Expandir.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.Expandir.Location = new System.Drawing.Point(359, 374);
+            this.Expandir.Location = new System.Drawing.Point(361, 408);
             this.Expandir.Name = "Expandir";
             this.Expandir.Size = new System.Drawing.Size(45, 30);
             this.Expandir.TabIndex = 11;
@@ -453,34 +488,6 @@
             this.Expandir.Click += new System.EventHandler(this.Expandir_Click);
             this.Expandir.MouseEnter += new System.EventHandler(this.Expandir_MouseHover);
             this.Expandir.MouseLeave += new System.EventHandler(this.Expandir_MouseLeave);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(592, 323);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 18);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Linguagem";
-            // 
-            // Linguage_Box
-            // 
-            this.Linguage_Box.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.Linguage_Box.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Linguage_Box.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Linguage_Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Linguage_Box.FormattingEnabled = true;
-            this.Linguage_Box.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Linguage_Box.Items.AddRange(new object[] {
-            "Português",
-            "Inglês"});
-            this.Linguage_Box.Location = new System.Drawing.Point(595, 344);
-            this.Linguage_Box.Name = "Linguage_Box";
-            this.Linguage_Box.Size = new System.Drawing.Size(156, 21);
-            this.Linguage_Box.TabIndex = 11;
             // 
             // panel6
             // 
@@ -490,25 +497,10 @@
             this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.button4);
             this.panel6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.panel6.Location = new System.Drawing.Point(19, 357);
+            this.panel6.Location = new System.Drawing.Point(12, 391);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(224, 47);
             this.panel6.TabIndex = 45;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.button4.Location = new System.Drawing.Point(6, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 33);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Carregar";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.OpenConfig_Button_Click);
             // 
             // button2
             // 
@@ -525,42 +517,121 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.SaveConfig_Button_Click);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.button4.Location = new System.Drawing.Point(6, 7);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(118, 33);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Carregar";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.OpenConfig_Button_Click);
+            // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(23, 347);
+            this.label10.Location = new System.Drawing.Point(16, 378);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(49, 18);
             this.label10.TabIndex = 46;
             this.label10.Text = "Perfil";
             // 
+            // listViewComandos
+            // 
+            this.listViewComandos.BackColor = System.Drawing.Color.White;
+            this.listViewComandos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listViewComandos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.comandos});
+            this.listViewComandos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewComandos.FullRowSelect = true;
+            this.listViewComandos.GridLines = true;
+            this.listViewComandos.HideSelection = false;
+            this.listViewComandos.Location = new System.Drawing.Point(755, 132);
+            this.listViewComandos.Name = "listViewComandos";
+            this.listViewComandos.Size = new System.Drawing.Size(197, 277);
+            this.listViewComandos.TabIndex = 47;
+            this.listViewComandos.UseCompatibleStateImageBehavior = false;
+            this.listViewComandos.View = System.Windows.Forms.View.Details;
+            this.listViewComandos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listViewComandos_KeyDown);
+            // 
+            // comandos
+            // 
+            this.comandos.Text = "";
+            this.comandos.Width = 195;
+            // 
+            // AddCommando_Button
+            // 
+            this.AddCommando_Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddCommando_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddCommando_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AddCommando_Button.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AddCommando_Button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddCommando_Button.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.AddCommando_Button.Location = new System.Drawing.Point(922, 415);
+            this.AddCommando_Button.Name = "AddCommando_Button";
+            this.AddCommando_Button.Size = new System.Drawing.Size(32, 20);
+            this.AddCommando_Button.TabIndex = 48;
+            this.AddCommando_Button.Text = ">";
+            this.AddCommando_Button.UseVisualStyleBackColor = false;
+            this.AddCommando_Button.Click += new System.EventHandler(this.AddCommando_Button_Click);
+            // 
+            // textBoxComando
+            // 
+            this.textBoxComando.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxComando.Location = new System.Drawing.Point(757, 415);
+            this.textBoxComando.Name = "textBoxComando";
+            this.textBoxComando.Size = new System.Drawing.Size(165, 20);
+            this.textBoxComando.TabIndex = 28;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label11.Location = new System.Drawing.Point(815, 135);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 18);
+            this.label11.TabIndex = 49;
+            this.label11.Text = "Comandos";
+            // 
             // Formulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(759, 416);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(954, 450);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.textBoxComando);
+            this.Controls.Add(this.AddCommando_Button);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.Linguage_Box);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Expandir);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.ServerConfig_Text);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.listViewComandos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Formulario";
             this.Text = "Lv12 4G";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Formulario_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Port_Input)).EndInit();
@@ -609,7 +680,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button Expandir;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox Linguage_Box;
         private System.Windows.Forms.NumericUpDown Angle_Input;
         private System.Windows.Forms.NumericUpDown OnMovingNet_Input;
@@ -621,6 +691,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button AddCommando_Button;
+        private System.Windows.Forms.TextBox textBoxComando;
+        private System.Windows.Forms.ColumnHeader comandos;
+        private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.ListView listViewComandos;
     }
 }
 

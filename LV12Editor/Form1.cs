@@ -31,16 +31,67 @@ namespace LV12Editor
                 // Se o índice é válido, define o SelectedIndex do ComboBox
                 Linguage_Box.SelectedIndex = indexSalvo;
             }
+            CarregarComandos();
         }
 
 
         #region functions avulsas
-        private void MensagemErro(string mensagem) { 
-        MessageBox.Show($"{mensagem}",
-                         "Erro", // Título da janela 
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+        private void AdicionarItemAoListView(string comando)
+        {
+            var item = new ListViewItem(comando);
+            listViewComandos.Items.Add(item);
+        }
+        private void MensagemErro(string mensagem)
+        {
+            MessageBox.Show($"{mensagem}",
+                             "Erro", // Título da janela 
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+        }
+        private void SalvarComandos()
+        {
+            var comandos = new List<string>();
+
+            // Itera por cada item no ListView
+            foreach (ListViewItem item in listViewComandos.Items)
+            {
+                // Adiciona o texto do item (primeira coluna) à lista de comandos
+                comandos.Add(item.Text);
             }
+
+            // Converte a lista em uma string delimitada por ";"
+            string comandosDelimitados = string.Join(";", comandos);
+            Properties.Settings.Default.Codigos = comandosDelimitados;
+            Properties.Settings.Default.Save();
+
+            // Salva a string delimitada nas configurações do aplicativo
+
+            Properties.Settings.Default.Save();
+        }
+
+
+        private void CarregarComandos()
+        {
+            // Lê a string delimitada das configurações do aplicativo
+            string comandosDelimitados = Properties.Settings.Default.Codigos;
+
+            // Verifica se a string não está vazia
+            if (!string.IsNullOrEmpty(comandosDelimitados))
+            {
+                // Divide a string delimitada para obter os comandos
+                string[] comandos = comandosDelimitados.Split(';');
+
+                // Limpa o ListView antes de adicionar os itens carregados
+                listViewComandos.Items.Clear();
+
+                // Adiciona cada comando de volta ao ListView
+                foreach (string comando in comandos)
+                {
+                    listViewComandos.Items.Add(new ListViewItem(comando));
+                }
+            }
+        }
+
         private void LerDevice(string portName, string command)  // envia o comando de ler o dispositivo e salva em string a leitura
         {
             using (SerialPort port = new SerialPort(portName, 9600, Parity.None, 8, StopBits.One))
@@ -64,7 +115,7 @@ namespace LV12Editor
                     }
                     ProgressBar.Value = 70;
                     if (configuracaoAtual.Count > 1)
-                        { 
+                    {
                         this.Invoke(new Action(() => Server_Input.Text = $"{configuracaoAtual[13]}"));
                         this.Invoke(new Action(() => Port_Input.Text = $"{configuracaoAtual[14]}"));
                         this.Invoke(new Action(() => APN_Input.Text = $"{configuracaoAtual[10]}"));
@@ -73,12 +124,13 @@ namespace LV12Editor
                         ProgressBar.Value = 99;
                         ProgressBar.Visible = false;
                     }
-                        else {
+                    else
+                    {
                         MensagemErro("Nenhuma configuração Recebida.");
                         ProgressBar.Value = 0;
                         ProgressBar.Visible = false;
                     }
-                    
+
                 }
                 catch (TimeoutException)
                 {
@@ -96,13 +148,13 @@ namespace LV12Editor
             }
         }
 
-  
+
         #endregion
 
         #region funcoes de comportamento
         private void ButtonReadAPN_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -113,7 +165,7 @@ namespace LV12Editor
 
 
         #endregion
-        
+
         private void comboBoxPort_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxPort.SelectedItem == null)
@@ -132,19 +184,19 @@ namespace LV12Editor
 
         bool Expandido = false;
         private void Expandir_MouseLeave(object sender, EventArgs e)
-        { 
-                Expandir.Location = new Point(Expandir.Location.X + 3, Expandir.Location.Y + 5);
-                Expandir.Size = new Size(45, 30);
+        {
+            Expandir.Location = new Point(Expandir.Location.X + 3, Expandir.Location.Y + 5);
+            Expandir.Size = new Size(45, 30);
         }
         private void Expandir_MouseHover(object sender, EventArgs e)
         {
-                Expandir.Size = new Size(50, 35);
-                Expandir.Location = new Point(Expandir.Location.X -3, Expandir.Location.Y - 5);
+            Expandir.Size = new Size(50, 35);
+            Expandir.Location = new Point(Expandir.Location.X - 3, Expandir.Location.Y - 5);
         }
 
         public void Expandir_Click(object sender, EventArgs e)
         {
-            
+
             if (Expandido == false)
             {
                 this.Size = new Size(775, 570);
@@ -157,7 +209,7 @@ namespace LV12Editor
                 Expandido = false;
                 Expandir.BackgroundImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
             }
-            }
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -238,8 +290,43 @@ namespace LV12Editor
             }
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
+        private void AddCommando_Button_Click(object sender, EventArgs e)
         {
-                    }
+            if (!string.IsNullOrWhiteSpace(textBoxComando.Text))
+            {
+                AdicionarItemAoListView(textBoxComando.Text);
+                textBoxComando.Clear(); // Limpa o TextBox após adicionar
+                SalvarComandos();
+            }
+
+        }
+
+        private void Formulario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void listViewComandos_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Verifica se a tecla Delete foi pressionada e se o ListView tem o foco
+            if (e.KeyCode == Keys.Delete && listViewComandos.Focused)
+            {
+                // Cria uma cópia da coleção de itens selecionados para evitar modificação durante a iteração
+                List<ListViewItem> itensSelecionados = new List<ListViewItem>();
+                foreach (ListViewItem item in listViewComandos.SelectedItems)
+                {
+                    itensSelecionados.Add(item);
+                }
+
+                // Remove os itens selecionados
+                foreach (ListViewItem item in itensSelecionados)
+                {
+                    listViewComandos.Items.Remove(item);
+                }
+
+                // Opcional: Atualiza os comandos salvos após a remoção
+                SalvarComandos();
+            }
+        }
     }
 }
