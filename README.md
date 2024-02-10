@@ -5,10 +5,10 @@ Desenvolvido com Widnwos Forms/ C-Sharp o Software Contem os seguintes Recursos
 - Envio de Comandos ao Rastreador
 - Salvar perfil de Rastreador para usar em Outro
 - Carregar perfil de Rastreador já salvos
-- Criar Comandos persolizados e salvar no proprio software
+- Criar Comandos personalizados e salvar no proprio software
 - Linguagem Português/Inglês
 - Visualização da Depuração USB (Resposta/Envio de comandos)
-- Seleção de Valores para facilitar registro
+- Seleção de Valores com a telca TAB para facilitar registro
 - Logo com URL
 
 Imagem do Software PT-BR
@@ -26,7 +26,7 @@ Developed with Widnwos Forms/ C-Sharp the Software Contains the following Featur
 - Create custom commands and save in the software itself
 - Portuguese/English language
 - Visualization of USB Debugging (Response/Sending commands)
-- Selection of Values ​​to facilitate registration
+- Selection of Values with TAB ​​to facilitate registration
 - URL in Image
 
 ENG-US Software Image
