@@ -5,13 +5,15 @@ Desenvolvido com Widnwos Forms/ C-Sharp o Software Contem os seguintes Recursos
 - Envio de Comandos ao Rastreador
 - Salvar perfil de Rastreador para usar em Outro
 - Carregar perfil de Rastreador já salvos
-- Criar Comnados persolizados e salvar no proprio software
+- Criar Comandos persolizados e salvar no proprio software
 - Linguagem Português/Inglês
 - Visualização da Depuração USB (Resposta/Envio de comandos)
 - Seleção de Valores para facilitar registro
+- Logo com URL
 
 Imagem do Software PT-BR
-![PTBR](https://github.com/petrusrosset/LV12Editor/assets/114839445/20f6519c-beb8-4473-83dd-680883bb1b8a)
+![image](https://github.com/petrusrosset/LV12Editor/assets/114839445/5251abeb-3207-4230-bb2d-20906c6176a2)
+
 
 
 Software Developed to Scan the LV12 Vehicle Tracker and send Commands to it.
@@ -25,7 +27,9 @@ Developed with Widnwos Forms/ C-Sharp the Software Contains the following Featur
 - Portuguese/English language
 - Visualization of USB Debugging (Response/Sending commands)
 - Selection of Values ​​to facilitate registration
+- URL in Image
 
 ENG-US Software Image
-![ENG](https://github.com/petrusrosset/LV12Editor/assets/114839445/51415b0b-3e5e-48ea-957a-2abb4fdc558b)
+![image](https://github.com/petrusrosset/LV12Editor/assets/114839445/36fae84c-cf9e-47bb-a9ba-1f45421928da)
+
 
